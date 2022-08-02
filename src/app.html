@@ -1,0 +1,42 @@
+<template>
+	<lightning-card>
+		<div class='slds-m-around_medium'>
+			<h1 class='slds-text-heading_large'>
+				Estrutura de dados
+			</h1>
+			<!-- <p>Nome: {pessoa.nome}</p>
+			<p>CPF: {pessoa.cpf}</p>
+			<p>Idade: {pessoa.idade}</p> -->
+
+			<h2 class='slds-text-heading_large '>
+				Dados da Conta</h2>
+			<p>Nome: {account.name}</p>
+			<p>Tipo: {account.type}</p>
+			<p>Classificação: {account.rating}</p>
+			<p>Website: {account.website}</p>
+
+			<h2 class='slds-text-heading_large '>
+				Pokemons</h2>
+			<!-- fo:each -> recebe uma lista com informações
+				o template irá repetir a quantidade de elementos da minha lista
+
+				for:item -> determina o local onde cada valor da lista fica armazenada a cada repetição
+
+				for(Account a: listAccount){}
+				for:each (listAccount)
+				for:item (a) 
+				 -->
+			<template for:each={pokemons} for:item='poke'>
+				<p key={poke.cod}>Nome: {poke.nome} - Tipo: {poke.tipo} - Nível: {poke.nivel}</p>
+				<!-- <div key={poke.cod}> 
+					<p>Nome: {poke.nome}</p>
+					<p>Tipo: {poke.tipo}</p>
+					<p>Nível: {poke.nivel}</p>
+				</div>-->
+
+
+
+			</template>
+		</div>
+	</lightning-card>
+</template>
